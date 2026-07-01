@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up | Food Auto</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Premium dark overlay with food background */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 { color: #ef4f5f; margin: 0 0 10px 0; font-size: 28px; }
+        p.subtitle { color: #666; font-size: 14px; margin-bottom: 25px; }
+
+        .input-box, .select-box {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: none;
+            background-color: #f0f7ff;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .input-box:focus, .select-box:focus { outline: 2px solid #ef4f5f; }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #ef4f5f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover { background-color: #d63d4d; }
+
+        .footer { margin-top: 20px; font-size: 14px; color: #555; }
+        .footer a { color: #ef4f5f; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Food Auto</h2>
+        <p class="subtitle">Create an account to start ordering</p>
+
+        <form action="RegisterServlet" method="POST">
+            <input type="text" name="userName" class="input-box" placeholder="Full Name" required>
+            <input type="email" name="email" class="input-box" placeholder="Email Address" required>
+            <input type="password" name="password" class="input-box" placeholder="Password" required>
+            <input type="text" name="phone" class="input-box" placeholder="Phone Number" required>
+            <input type="text" name="address" class="input-box" placeholder="Delivery Address" required>
+            
+            <select name="role" class="select-box" required>
+                <option value="" disabled selected>Select Account Type</option>
+                <option value="CUSTOMER">Customer</option>
+                <option value="ADMIN">Admin</option>
+            </select>
+            
+            <button type="submit" class="btn-submit">Create Account</button>
+        </form>
+
+        <div class="footer">
+            Already have an account? <a href="Login.html">Log in</a>
+        </div>
+    </div>
+
+</body>
+</html>
