@@ -1,169 +1,182 @@
-# 🍔 Food-Auto
+# 🍔 FoodAuto
 
-<div align="center">
+A **Full Stack Food Ordering Web Application** built using **Java, JSP, Servlets, JDBC, MySQL, HTML, CSS, and JavaScript**.
 
-### A Full Stack Food Ordering Web Application
+FoodAuto simulates the workflow of a modern food delivery platform where users can register, browse restaurants, order food, manage their cart, and track their orders through a clean and user-friendly interface.
 
-Built using **Java • JSP • Servlets • JDBC • MySQL • HTML • CSS • JavaScript**
+---
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![JSP](https://img.shields.io/badge/JSP-orange?style=for-the-badge)
-![Servlets](https://img.shields.io/badge/Servlets-red?style=for-the-badge)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)
+## 📖 About the Project
 
-# 📌 About The Project
+FoodAuto is a full-stack web application developed to gain practical experience in Java web development and understand how online food ordering systems work.
 
-Food-Auto is a **Full Stack Food Ordering Web Application** inspired by platforms like **Swiggy** and **Zomato**.
+The project demonstrates user authentication, restaurant browsing, menu management, shopping cart functionality, order processing, session management, and database connectivity using Java EE technologies.
 
-The application enables users to browse restaurants, explore menus, add food items to their cart, complete secure checkout, and place orders. It also includes an **Admin Panel** for managing restaurants, menus, and customer orders.
+---
 
-The project follows the **MVC Architecture** and demonstrates real-world implementation of **Java Web Development** using Servlets, JSP, JDBC, and MySQL.
+## ✨ Features
 
-# 🚀 Features
+### 👤 Customer Module
 
-## 👤 Customer Module
-
-- User Registration
-- Secure Login
+- Secure User Registration
+- User Login & Logout
 - Browse Restaurants
 - Search Restaurants
-- View Restaurant Menu
-- Add to Cart
+- View Restaurant Menus
+- Add Items to Cart
 - Update Cart Quantity
-- Checkout
-- Multiple Payment Options
+- Remove Items from Cart
+- Checkout Process
+- Multiple Payment Options (UI)
 - Order Confirmation
-- View Order History
+- Order History
 - User Profile
 
-## 👨‍💼 Admin Module
+### 🛠️ Admin Module
 
-- Admin Login
 - Restaurant Management
 - Menu Management
 - Customer Management
 - Order Management
 
-# 🛠 Tech Stack
+---
 
-### Frontend
+## 🛠 Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript
-- JSP
+| Category | Technologies |
+|----------|--------------|
+| **Frontend** | HTML5, CSS3, JavaScript, JSP |
+| **Backend** | Java, Servlets |
+| **Database** | MySQL |
+| **Database Connectivity** | JDBC |
+| **Web Server** | Apache Tomcat |
+| **IDE** | Eclipse IDE |
+| **Version Control** | Git & GitHub |
 
-### Backend
+---
 
-- Java
-- Servlets
-- JDBC
+## 🏗️ Project Architecture
 
-### Database
+The application follows the **MVC (Model-View-Controller)** Architecture.
 
-- MySQL
-
-### Server
-
-- Apache Tomcat 9
-
-### IDE
-
-- Eclipse IDE
-
-### Version Control
-
-- Git
-- GitHub
-
-# 🏗 Project Structure
 ```
-FoodDeliveryApp
+User
+   │
+   ▼
+JSP Pages (View)
+   │
+   ▼
+Servlets (Controller)
+   │
+   ▼
+DAO Layer + Model
+   │
+   ▼
+MySQL Database
+```
+
+---
+
+## 📂 Project Structure
+
+```
+FoodAuto
 │
-├── src/main/java
+├── src
 │   ├── Controller
 │   ├── DAO
-│   ├── DAO Implementation
+│   ├── DAOImplementation
 │   ├── Model
 │   └── Utility
 │
-├── src/main/webapp
-│   ├── HTML
-│   ├── JSP
+├── WebContent
 │   ├── CSS
-│   └── Images
+│   ├── Images
+│   ├── JSP Pages
+│   └── HTML Pages
 │
-└── MySQL Database
+├── screenshots
+│
+└── README.md
 ```
+
+---
 
 # 📸 Application Screenshots
 
-## 🔐 Login Page
+## 🔐 Login
 
 ![Login](screenshots/login.png)
 
-## 📝 Registration Page
+---
 
-![Register](screenshots/register.png)
+## 📝 Registration
+
+![Registration](screenshots/register.png)
+
+---
 
 ## 🏠 Home Page
 
 ![Home](screenshots/home.png)
 
+---
+
 ## 🍽 Restaurant Listing
 
 ![Restaurant](screenshots/home1.png)
+
+---
 
 ## 📖 Restaurant Menu
 
 ![Menu](screenshots/menu.png)
 
+---
+
 ## 🛒 Shopping Cart
 
 ![Cart](screenshots/cart%20(2).png)
 
-## 💳 Checkout Page
+---
+
+## 📦 Checkout
 
 ![Checkout](screenshots/checkout.png)
 
-## 💰 Payment Page
+---
+
+## 💳 Payment
 
 ![Payment](screenshots/payment.png)
 
-## ✅ Order Confirmation
+---
+
+## ✅ Order Success
 
 ![Order Success](screenshots/ordersuccess.png)
 
-# ⚙️ Installation
+---
 
-## Clone Repository
+## ⚙️ Installation Guide
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Mjn-001/Food-Auto.git
 ```
 
-Open the project using **Eclipse IDE**.
+### 2. Open in Eclipse
 
-Import it as a **Dynamic Web Project**.
+Import the project as a **Dynamic Web Project**.
 
-Configure **Apache Tomcat 9**.
+### 3. Configure Apache Tomcat
 
-Create the required MySQL database.
+Add Apache Tomcat to Eclipse and deploy the project.
 
-Update the JDBC connection credentials.
+### 4. Configure MySQL
 
-Run the application on Tomcat.
-
-Open:
-
-```
-http://localhost:8080/FoodDeliveryApp/
-```
-
----
-
-# 🗄 Database Configuration
+Create the required database and import the SQL file.
 
 Update your JDBC credentials before running.
 
@@ -175,96 +188,93 @@ String username = "root";
 String password = "your_password";
 ```
 
-# 🔄 Application Workflow
+### 5. Run the Project
+
+Start Apache Tomcat and open:
 
 ```
-User Registration/Login
-          │
-          ▼
-Browse Restaurants
-          │
-          ▼
-View Menu
-          │
-          ▼
-Add Food to Cart
-          │
-          ▼
-Checkout
-          │
-          ▼
-Payment
-          │
-          ▼
-Order Confirmation
-```
-
-# ✨ Highlights
-
-- Full Stack Java Web Application
-- MVC Architecture
-- JDBC Connectivity
-- Session Management
-- CRUD Operations
-- Dynamic JSP Pages
-- Responsive UI
-- Restaurant Search
-- Shopping Cart
-- Checkout System
-- Order Management
-- Admin Dashboard
-- Clean Code Structure
-
-# 🚀 Future Enhancements
-
-- Online Payment Gateway Integration
-- Email Notifications
-- OTP Verification
-- Google Maps Integration
-- Live Order Tracking
-- Restaurant Reviews
-- Ratings System
-- Responsive Mobile Design
-- Spring Boot Migration
-- Docker Deployment
-- Cloud Hosting
-
-# ▶️ Running the Project
-
-### Requirements
-
-- Java JDK 8+
-- Eclipse IDE
-- Apache Tomcat 9
-- MySQL Server
-
-Run the project on Tomcat.
-
-Access it at:
-
-```
-http://localhost:8080/FoodDeliveryApp/
+http://localhost:8080/FoodAuto/
 ```
 
 ---
 
-# 👨‍💻 Developer
+## 🔄 Application Workflow
 
-## Madhan
+```
+Login / Register
+        │
+        ▼
+Browse Restaurants
+        │
+        ▼
+View Menu
+        │
+        ▼
+Add to Cart
+        │
+        ▼
+Checkout
+        │
+        ▼
+Select Payment Method
+        │
+        ▼
+Place Order
+        │
+        ▼
+Order Confirmation
+```
 
-Engineering Student • Full Stack Java Developer • Content Creator
+---
 
-GitHub:
+## 📚 What I Learned
 
-https://github.com/Mjn-001
+Through this project, I gained practical experience in:
 
+- Java Full Stack Development
+- Java Servlets
+- JSP
+- JDBC
+- MySQL Database
+- MVC Architecture
+- DAO Design Pattern
+- Session Management
+- CRUD Operations
+- Database Connectivity
+- Git & GitHub
 
-# ⭐ Support
+---
 
-If you found this project helpful,
+## 🚀 Future Enhancements
 
-### ⭐ Star this repository on GitHub!
+- Online Payment Gateway Integration
+- Email Notifications
+- Live Order Tracking
+- Restaurant Ratings & Reviews
+- Google Maps Integration
+- Responsive Mobile UI
+- Spring Boot Migration
+- REST API Development
+- Docker Deployment
 
-It helps others discover the project and motivates further development.
+---
 
-## Thank You ❤️
+## 👨‍💻 Developer
+
+**Manjunath N**
+
+Engineering Student | Java Full Stack Developer | Content Creator
+
+**GitHub:** https://github.com/Mjn-001
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a **Star ⭐** on GitHub.
+
+It motivates me to build more exciting projects and continue learning.
+
+---
+
+**Thank you for visiting my repository! 🚀**
